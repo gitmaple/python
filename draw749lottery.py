@@ -3,19 +3,12 @@ import sys
 
 from random import choice
 
-# try github
-
-
-# delete some code
-
-
 
 try:
-    n=int(input("Please input total number for draw:"))
-    m=int(input("How many draws do you want?"))
+    n = int(input("Please input total number for draw:"))
+    m = int(input("How many draws do you want?"))
 
     if n <= 0 or m <= 0 or m > n:
-        #print("The number is wrong!")
         sys.exit("The number is wrong!")
     
 
@@ -24,18 +17,16 @@ except ValueError:
 
 else:
     
-    num_lists=list(range(1,n+1))
-    #print(num_lists)
+    num_lists = list(range(1,n+1))
 
-    
-    i=1
-    selected_nums=[]
-    selected_num=0
+    i = 1
+    selected_nums = []
+    selected_num = 0
 
     while i <= m:
-        selected_num=choice(num_lists)
+        selected_num = choice(num_lists)
         selected_nums.append(selected_num)
         num_lists.remove(selected_num)
-        i +=1
+        i += 1
 
     print(sorted(selected_nums))
