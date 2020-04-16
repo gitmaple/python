@@ -4,7 +4,11 @@ import sys
 from random import choice
 
 # try github
-#num_lists=[]
+
+
+# delete some code
+
+
 
 try:
     n=int(input("Please input total number for draw:"))
